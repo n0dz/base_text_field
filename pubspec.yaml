@@ -1,7 +1,7 @@
 name: base_text_field
 description: Base text field .
 version: 0.0.1
-homepage:
+homepage: https://gitlab.vtnetzwelt.com/mobile/flutter-aditya-assessment/-/tree/package/base_text_field?ref_type=heads
 
 environment:
   sdk: '>=3.1.2 <4.0.0'
