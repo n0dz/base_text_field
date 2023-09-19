@@ -37,7 +37,9 @@ class BaseTextField extends StatelessWidget {
   final Color? errorColor;
   final Color? textColor;
   final String? fontFamily;
-  final Map<String, dynamic> extras;/// save extra data using key value pair
+  final Map<String, dynamic> extras;
+
+  /// save extra data using key value pair
 
   @override
   Widget build(BuildContext context) {
@@ -47,12 +49,14 @@ class BaseTextField extends StatelessWidget {
           width: padding24,
           height: padding24,
           padding: const EdgeInsets.only(left: padding8),
-          child: asset!.isEmpty ? const Icon(Icons.person) : Image.asset(
-            asset!,
-            width: padding24,
-            height: padding24,
-            color: imageColor,
-          ),
+          child: asset!.isEmpty
+              ? const Icon(Icons.person)
+              : Image.asset(
+                  asset!,
+                  width: padding24,
+                  height: padding24,
+                  color: imageColor,
+                ),
         ),
         Expanded(
           child: Padding(

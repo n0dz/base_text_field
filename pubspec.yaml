@@ -1,6 +1,6 @@
 name: base_text_field
 description: Base text field .
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/n0dz/base_text_field.git
 
 environment:
