@@ -47,7 +47,7 @@ class BaseTextField extends StatelessWidget {
           width: padding24,
           height: padding24,
           padding: const EdgeInsets.only(left: padding8),
-          child: Image.asset(
+          child: asset.isEmpty ? const Icon(Icons.person) : Image.asset(
             asset,
             width: padding24,
             height: padding24,
@@ -60,7 +60,7 @@ class BaseTextField extends StatelessWidget {
             child: TextFormField(
               autocorrect: false,
               controller: controller,
-              initialValue: initialValue,
+              initialValue: controller != null ? null : initialValue,
               textCapitalization: TextCapitalization.none,
               enableSuggestions: false,
               obscureText: obscureText ?? false,
