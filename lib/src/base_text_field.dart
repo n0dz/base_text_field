@@ -8,8 +8,8 @@ class BaseTextField extends StatelessWidget {
       {Key? key,
       required this.validate,
       this.save,
-      required this.asset,
-      required this.hintText,
+      this.asset = "",
+      this.hintText,
       this.onTap,
       this.controller,
       this.obscureText = false,
@@ -23,8 +23,8 @@ class BaseTextField extends StatelessWidget {
       required this.extras})
       : super(key: key);
 
-  final String asset;
-  final String hintText;
+  final String? asset;
+  final String? hintText;
   final String? Function(String?) validate;
   final String? Function(String?)? save;
   final VoidCallback? onTap;
@@ -47,8 +47,8 @@ class BaseTextField extends StatelessWidget {
           width: padding24,
           height: padding24,
           padding: const EdgeInsets.only(left: padding8),
-          child: asset.isEmpty ? const Icon(Icons.person) : Image.asset(
-            asset,
+          child: asset!.isEmpty ? const Icon(Icons.person) : Image.asset(
+            asset!,
             width: padding24,
             height: padding24,
             color: imageColor,
